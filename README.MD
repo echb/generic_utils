@@ -5,6 +5,12 @@
 - differenceB
 - symetricDifference
 
+# Import
+
+```js
+import { setTheory } from "useful_generic_utils";
+```
+
 # Examples
 
 ### From sets A and B
