@@ -21,10 +21,10 @@
 
 /**
  * It can return 4 possible set's:
- * - differenceA = A\B
- * - differenceB = B\A
- * - intersection = A∩B
- * - symetricDifference = A∆B
+ * - differenceA = A\B (wich values are in A but not B)
+ * - differenceB = B\A (wich values are in B but not A)
+ * - intersection = A∩B (wich values are in A and B)
+ * - symetricDifference = A∆B (wich values are in A but not in B and values in B but not in A)
  * 
  * @param {Object} param - 
  * @param {Array<T>} [param.setA ]
@@ -115,7 +115,7 @@ class Values {
 
   add(id, value) {
     if (this.#removeRepeatedValues) {
-      this.#setValues[id] = value
+      this.#setValues[id ?? value] = value
       return
     }
     this.#arrayValues.push(value)
